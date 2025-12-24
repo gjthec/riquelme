@@ -24,8 +24,8 @@ const Card: React.FC<CardProps> = ({
         className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
         style={{ backgroundImage: `url(${image})` }}
       />
-      {/* Overlay mais suave para destacar as cores da nutrição */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity duration-500 group-hover:opacity-60" />
+      {/* Overlay otimizado para legibilidade sem esconder a vibrância da imagem */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-60" />
 
       <div className="relative h-full flex flex-col justify-end p-8 z-10">
         <span className="text-xs font-bold tracking-[0.3em] text-yellow-400 uppercase mb-1 drop-shadow-lg">
@@ -70,7 +70,7 @@ const ActionCards: React.FC = () => {
         <Card
           subtitle="Atendimento Físico"
           title="Presencial"
-          // Imagem que estava no online (Profissional/Atendimento)
+          // Imagem de atendimento profissional e humanizado
           image="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=1200"
           tags={["Aguanil-MG"]}
           onClick={() => openWhatsApp("Presencial")}
@@ -78,8 +78,8 @@ const ActionCards: React.FC = () => {
         <Card
           subtitle="Atendimento Digital"
           title="On-line"
-          // Nova imagem vibrante focada em nutrição colorida
-          image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=1200"
+          // Imagem que remete a atendimento online (laptop/digital) com cores vibrantes
+          image="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&q=80&w=1200"
           tags={[]}
           onClick={() => openWhatsApp("On-line")}
         />
