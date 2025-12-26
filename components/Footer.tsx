@@ -5,8 +5,9 @@ const Footer: React.FC = () => {
     <footer className="py-24 border-t border-white/5 text-center space-y-10 bg-brand-dark">
       <div className="flex justify-center gap-12 text-[10px] uppercase tracking-[0.4em] text-brand-taupe font-thin">
         <a
-          href="https://instagram.com/riquelmeemanuel"
+          href="https://instagram.com/emanuelcamposnutri"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-brand-cream transition-colors duration-500"
         >
           Instagram
@@ -14,6 +15,7 @@ const Footer: React.FC = () => {
         <a
           href="https://wa.me/553599098492"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-brand-cream transition-colors duration-500"
         >
           WhatsApp
@@ -36,7 +38,7 @@ const Footer: React.FC = () => {
               if (parent) {
                 const title = document.createElement("p");
                 title.className =
-                  "text-[12px] text-brand-cream uppercase tracking-[0.5em] font-thin opacity-90";
+                  "text-[12px] text-brand-cream uppercase tracking-[0.5em] font-thin opacity-90 font-prompt";
                 title.innerText = "Riquelme Emanuel";
                 parent.appendChild(title);
               }
@@ -45,10 +47,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-1.5 pt-2">
-          <p className="text-[9px] text-brand-taupe uppercase tracking-[0.3em] font-thin">
+          <p className="text-[9px] text-brand-taupe uppercase tracking-[0.3em] font-prompt font-extralight">
             Nutricionista Esportivo e Estético
           </p>
-          <p className="text-[8px] text-brand-taupe/40 uppercase tracking-[0.25em] font-thin">
+          <p className="text-[8px] text-brand-taupe/40 uppercase tracking-[0.25em] font-prompt font-thin">
             CRN 35559
           </p>
         </div>
