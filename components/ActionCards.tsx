@@ -1,4 +1,5 @@
 import React from "react";
+import { logButtonClick } from "../lib/analytics";
 
 interface CardProps {
   title: string;
@@ -55,11 +56,11 @@ const ActionCards: React.FC = () => {
   const phoneNumber = "553599098492";
 
   const openWhatsApp = (type: "Presencial" | "On-line") => {
-    // Mensagem ajustada para ser mais direta e profissional
+    logButtonClick(`Agendar Consulta - ${type}`);
     const message = `Olá, gostaria de saber mais informações sobre a *Consulta ${type}*. Como funciona o agendamento?`;
     const encodedMessage = encodeURIComponent(message);
     window.open(
-      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`,
       "_blank"
     );
   };

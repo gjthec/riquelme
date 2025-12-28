@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { logButtonClick } from "../lib/analytics";
 
 const Hero: React.FC = () => {
   const fallbackImage =
@@ -49,14 +50,12 @@ const Hero: React.FC = () => {
             Nutrição inteligente para quem busca evolução real
           </h2>
 
-          {/* Logo SVG - Substitui o texto RIQUELME EMANUEL */}
           <div className="py-2 flex justify-center w-full max-w-[320px] md:max-w-[450px]">
             <img
               src="logo.svg"
               alt="Riquelme Emanuel"
               className="w-full h-auto object-contain brightness-0 invert opacity-95"
               onError={(e) => {
-                // Caso o arquivo logo.svg não exista, exibe um fallback elegante em texto slim
                 e.currentTarget.style.display = "none";
                 const parent = e.currentTarget.parentElement;
                 if (parent) {
